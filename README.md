@@ -1,3 +1,3 @@
-# bean
+# Bean
 
-Coffee Maker Studio generic engine package.
+Reusable generic engine system and physics capability contracts. Bean depends only on Roast.

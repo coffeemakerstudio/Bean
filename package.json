@@ -1,25 +1,30 @@
 {
   "name": "@coffeemakerstudio/bean",
   "version": "0.1.0",
+  "description": "Reusable generic engine system and physics capability contracts. Bean depends only on Roast.",
   "type": "module",
-  "peerDependencies": {
-    "@coffeemakerstudio/roast": "^0.1.0"
-  },
-  "peerDependenciesMeta": {
-    "@coffeemakerstudio/roast": { "optional": true }
-  },
   "exports": {
     ".": {
-      "types": "./src/index.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     }
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
-    "build": "bun build src/index.ts --outdir dist --format esm",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build": "tsc -p tsconfig.json && bun build src/index.ts --outdir dist --format esm",
+    "test": "bun test tests/*.test.ts"
+  },
+  "peerDependencies": {
+    "@coffeemakerstudio/roast": "^0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@coffeemakerstudio/roast": {
+      "optional": true
+    }
   }
 }
