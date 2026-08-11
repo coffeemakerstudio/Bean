@@ -5,6 +5,9 @@
   "peerDependencies": {
     "@coffeemakerstudio/roast": "^0.1.0"
   },
+  "peerDependenciesMeta": {
+    "@coffeemakerstudio/roast": { "optional": true }
+  },
   "exports": {
     ".": {
       "types": "./src/index.ts",
