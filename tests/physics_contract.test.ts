@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { SHAPE, isFiniteVector, isPhysicsParticipant, validatePhysicsBody } from "@coffeemakerstudio/bean";
+import { SHAPE, isFiniteVector, isPhysicsParticipant, validatePhysicsBody } from "../src/index.ts";
 test("Bean exposes generic physics validity and participation contracts", () => {
   expect(isFiniteVector({ x: 1, y: -2 })).toBe(true);
   expect(isFiniteVector({ x: Infinity, y: 0 })).toBe(false);
