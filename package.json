@@ -2,7 +2,7 @@
   "name": "@coffeemakerstudio/bean",
   "version": "0.1.0",
   "type": "module",
-  "dependencies": {
+  "peerDependencies": {
     "@coffeemakerstudio/roast": "^0.1.0"
   },
   "exports": {
