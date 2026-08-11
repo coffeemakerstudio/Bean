@@ -55,7 +55,7 @@ export function validatePhysicsBody(body) {
     if (!Number.isFinite(body.bounds.x) || !Number.isFinite(body.bounds.y) || body.bounds.x < 0 || body.bounds.y < 0) {
         throw new Error(`Invalid physics body: bounds must be finite and non-negative, got (${body.bounds.x}, ${body.bounds.y})`);
     }
-    if (body.shape === 0 /* SHAPE.CIRCLE */ && body.bounds.x <= 0) {
+    if (body.shape === SHAPE.CIRCLE && body.bounds.x <= 0) {
         throw new Error(`Invalid physics body: a circle needs a positive radius, got ${body.bounds.x}`);
     }
     if (body.mass !== Infinity && (!Number.isFinite(body.mass) || body.mass <= 0)) {
@@ -74,11 +74,20 @@ export function forwardVectorFromRotation(rotation) {
 export function isStructureCollisionRole(value) {
     return value === "solid" || value === "containment" || value === "both";
 }
+/**
+ * Kombi-Typ: Ein Objekt in der Physik-Engine ist ENTWEDER ein Kreis ODER ein Rechteck.
+ * (Es kann in der Zukunft Erweitert werden, aber aktuell sind es nur die 2) */
+export var SHAPE;
+(function (SHAPE) {
+    SHAPE[SHAPE["CIRCLE"] = 0] = "CIRCLE";
+    SHAPE[SHAPE["LINE"] = 1] = "LINE";
+    SHAPE[SHAPE["RECTANGLE"] = 2] = "RECTANGLE";
+})(SHAPE || (SHAPE = {}));
 export function getShapeName(input) {
     switch (input) {
-        case 0 /* SHAPE.CIRCLE */: return "circle";
-        case 2 /* SHAPE.RECTANGLE */: return "rectangle";
-        case 1 /* SHAPE.LINE */: return "line";
+        case SHAPE.CIRCLE: return "circle";
+        case SHAPE.RECTANGLE: return "rectangle";
+        case SHAPE.LINE: return "line";
         default: return "TODO";
     }
 }

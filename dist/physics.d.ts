@@ -214,7 +214,7 @@ export interface LinePhysics extends IdefaultPhysics {
 /**
  * Kombi-Typ: Ein Objekt in der Physik-Engine ist ENTWEDER ein Kreis ODER ein Rechteck.
  * (Es kann in der Zukunft Erweitert werden, aber aktuell sind es nur die 2) */
-export declare const enum SHAPE {
+export declare enum SHAPE {
     CIRCLE = 0,
     LINE = 1,
     RECTANGLE = 2

@@ -277,7 +277,7 @@ export interface LinePhysics extends IdefaultPhysics { getShape(): SHAPE.LINE; }
 /** 
  * Kombi-Typ: Ein Objekt in der Physik-Engine ist ENTWEDER ein Kreis ODER ein Rechteck. 
  * (Es kann in der Zukunft Erweitert werden, aber aktuell sind es nur die 2) */
-export const enum SHAPE { CIRCLE, LINE, RECTANGLE }
+export enum SHAPE { CIRCLE, LINE, RECTANGLE }
 export type PhyicsMap = {
 	[SHAPE.CIRCLE]: CirclePhysics
 	[SHAPE.RECTANGLE]: RectanglePhysics
