@@ -2,8 +2,21 @@
   "name": "@coffeemakerstudio/bean",
   "version": "0.1.0",
   "type": "module",
-  "dependencies": { "@coffeemakerstudio/roast": "workspace:*" },
-  "exports": { ".": { "types": "./src/index.ts", "import": "./dist/index.js" } },
-  "files": ["dist", "README.md"],
-  "scripts": { "build": "bun build src/index.ts --outdir dist --format esm", "typecheck": "tsc -p tsconfig.json --noEmit" }
+  "dependencies": {
+    "@coffeemakerstudio/roast": "^0.1.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --format esm",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
 }
