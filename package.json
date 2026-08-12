@@ -1,6 +1,6 @@
 {
   "name": "@coffeemakerstudio/bean",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Reusable generic engine system and physics capability contracts. Bean depends only on Roast.",
   "type": "module",
   "exports": {
@@ -21,7 +21,7 @@
     "clean": "rm -rf dist"
   },
   "peerDependencies": {
-    "@coffeemakerstudio/roast": "^0.2.0"
+    "@coffeemakerstudio/roast": "^0.3.0"
   },
   "peerDependenciesMeta": {
     "@coffeemakerstudio/roast": {
